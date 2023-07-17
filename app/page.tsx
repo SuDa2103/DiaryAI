@@ -50,12 +50,11 @@ export default function Page() {
           rel="noopener noreferrer"
         >
           <Github />
-          <p>Star on GitHub</p>
+          <p>Sign Up for the Full Version</p>
         </a>
         <h1 className="sm:text-6xl text-4xl max-w-[708px] font-bold text-slate-900">
-          Generate your next Twitter bio using chatGPT
+          A Diary that Speaks Back to You
         </h1>
-        <p className="text-slate-500 mt-5">47,118 bios generated so far.</p>
         <form className="max-w-xl w-full" onSubmit={onSubmit}>
           <div className="flex mt-10 items-center space-x-3">
             <Image
@@ -66,11 +65,10 @@ export default function Page() {
               className="mb-5 sm:mb-0"
             />
             <p className="text-left font-medium">
-              Copy your current bio{' '}
-              <span className="text-slate-500">
+              Write your Diary entry{' '}
+              {/* <span className="text-slate-500">
                 (or write a few sentences about yourself)
-              </span>
-              .
+              </span> */}
             </p>
           </div>
           <textarea
@@ -79,7 +77,7 @@ export default function Page() {
             rows={4}
             className="w-full rounded-md border-gray-300 shadow-sm focus:border-black focus:ring-black my-5"
             placeholder={
-              'e.g. Senior Developer Advocate @vercel. Tweeting about web development, AI, and React / Next.js. Writing nutlope.substack.com.'
+              'e.g. Dear Diary, today I tried out this amazing new AI Tool...'
             }
           />
           <div className="flex mb-5 items-center space-x-3">
@@ -95,7 +93,7 @@ export default function Page() {
               className="bg-black rounded-xl text-white font-medium px-4 py-2 sm:mt-10 mt-8 hover:bg-black/80 w-full"
               type="submit"
             >
-              Generate your bio &rarr;
+              Generate your response &rarr;
             </button>
           )}
           {isLoading && (
@@ -153,7 +151,6 @@ export default function Page() {
           )}
         </output>
       </main>
-      <Footer />
     </div>
   );
 }
